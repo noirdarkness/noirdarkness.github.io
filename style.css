@@ -259,3 +259,20 @@ html,
 body {
     cursor: none;
 }
+
+/* Define a background video for desktop */
+@media screen and (min-width: 769px) {
+    body {
+        background-image: url('media/26.mp4');
+    }
+}
+
+/* Define a background image for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('media/background.gif');
+    }
+}
+
+/* Add more CSS styles as needed */
+
