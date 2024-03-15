@@ -1,0 +1,28 @@
+/* Define custom cursor styles for desktop and tablet screens */
+.cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    background-image: url('media/asterisk.png');
+    background-size: cover;
+    pointer-events: none;
+    z-index: 9999; /* Set a high z-index to ensure it stays on top of other elements */
+}
+
+/* Optionally, you can add transitions for smooth cursor movement */
+.cursor {
+    transition: transform 0.15s ease-out;
+}
+
+/* Hide the custom cursor on mobile devices */
+@media screen and (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}
+
+.custom-cursor {
+    position: fixed;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with mouse events */
+    /* Add other styling properties for your custom cursor */
+}
