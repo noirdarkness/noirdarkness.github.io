@@ -271,39 +271,15 @@ body {
 
 /* CSS */
 
-/* Define a background video for desktop */
-@media screen and (min-width: 769px) {
-    body {
-        background-image: url('media/26.mp4');
-    }
-}
-
-/* Define a background image for mobile */
+/* Hide the custom cursor on mobile devices */
 @media screen and (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+
+    /* For mobile devices, replace background video with image */
     body {
         background-image: url('media/skyline.png');
-    }
-}
-
-
-/* Add more CSS styles as needed */
-
-/* CSS */
-
-/* Background styles for desktop */
-@media screen and (min-width: 769px) {
-    body {
-        background-image: url("media/26.mp4");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-/* Background styles for mobile */
-@media screen and (max-width: 768px) {
-    body {
-        background-image: url("media/skyline.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
