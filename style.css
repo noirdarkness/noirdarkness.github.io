@@ -269,6 +269,8 @@ body {
     background-repeat: no-repeat;
 }
 
+/* CSS */
+
 /* Define a background video for desktop */
 @media screen and (min-width: 769px) {
     body {
@@ -283,21 +285,27 @@ body {
     }
 }
 
+
 /* Add more CSS styles as needed */
 
 /* CSS */
 
-body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('media/skyline.png'); /* Default background image for all devices */
-}
-
-/* Override the background for desktops with a video */
+/* Background styles for desktop */
 @media screen and (min-width: 769px) {
     body {
-        background-image: none; /* Remove the default background image */
-        background-image: url('media/26.mp4');
+        background-image: url("media/26.mp4");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Background styles for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("media/skyline.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
