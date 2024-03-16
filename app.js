@@ -20,3 +20,23 @@ document.addEventListener('mousemove', function(e) {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
 });
+
+// Check if the device is a mobile device
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+// Set background image or video based on device
+function setBackground() {
+    var body = document.querySelector('body');
+    if (isMobileDevice()) {
+        body.style.backgroundImage = "url('media/skyline.png')";
+    } else {
+        body.style.backgroundImage = "url('media/26.mp4')";
+    }
+}
+
+// Call setBackground function when the page loads
+window.onload = function() {
+    setBackground();
+};
