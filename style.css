@@ -279,7 +279,7 @@ body {
 /* Define a background image for mobile */
 @media screen and (max-width: 768px) {
     body {
-        background-image: url('media/background.gif');
+        background-image: url('media/skyline.png');
     }
 }
 
@@ -291,7 +291,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('media/background.gif'); /* Default background image for all devices */
+    background-image: url('media/skyline.png'); /* Default background image for all devices */
 }
 
 /* Override the background for desktops with a video */
