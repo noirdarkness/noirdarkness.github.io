@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap');
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Ensure relative positioning for child elements */
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.5s; /* Faster transition for fade-in */
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s; /* Adjusted transition for logo sliding */
+}
+
+.logos {
+    display: flex;
+    justify-content: center; /* Center the logos horizontally */
+    align-items: center;
+    opacity: 0; /* Initially hide the logos */
+    transition: opacity 0.5s ease; /* Faster transition for logo fading */
+}
+
+.logos.show {
+    opacity: 1; /* Show the logos after animation */
+}
+
+.logo img {
+    display: block;
+    margin: auto; /* Centers the image horizontally */
+    transform: translateX(-100%); /* Initially position the logo outside the screen */
+    transition: transform 1s ease; /* Smooth transition for logo sliding */
+}
+
+.logo.show img {
+    transform: translateX(0); /* Slide the logo into the center */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px 40px; /* Added padding to the right side */
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 80px); /* Adjusted width to account for padding */
+}
+
+.footer-item a {
+    color: white; /* Change the link color to white */
+    text-decoration: none; /* Remove the underline */
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logos {
+        flex-direction: column; /* Stack logos vertically on smaller screens */
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-item {
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle img {
+    width: 40px; /* Adjust as needed */
+    height: auto;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hide the menu off-screen */
+    width: 250px; /* Adjust as needed */
+    height: 100%;
+    background-color: #000;
+    padding-top: 60px; /* Adjust according to your top bar height */
+    transition: left 0.3s ease;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-toggle.open + #menu {
+    left: 0;
+}
+
+/* Hide the custom cursor on mobile devices */
+@media screen and (max-width: 768px) {
+    .cursor {
+        display: none;
+    }
+}
+
+/* CSS */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the video is behind other content */
+}
+
+#video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Stretch video to cover entire container */
+}
+
+.logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the logo is above the video */
+}
+
+/* Rest of your CSS styles here */
+
+/* Footer styles */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent; /* Set background color to transparent */
+    color: white;
+    padding: 20px 40px; /* Added padding to the right side */
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 80px); /* Adjusted width to account for padding */
+    z-index: 2; /* Ensure the footer appears above the video */
+}
+
+.footer-item {
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+#menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle img {
+    width: 40px; /* Adjust as needed */
+    height: auto;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Initially hide the menu off-screen */
+    width: 250px; /* Adjust as needed */
+    height: 100%;
+    background-color: #000;
+    padding-top: 60px; /* Adjust according to your top bar height */
+    transition: left 0.3s ease;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#menu-toggle.open + #menu {
+    left: 0;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+}
+
+.image-background {
+    background-image: url('media/noir-bg.png'); /* Image background */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Add more CSS styles as needed */

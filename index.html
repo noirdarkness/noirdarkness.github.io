@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noir</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/asterisk.ico" type="image/x-icon">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="background">
+        <!-- Replace the grey background with an image -->
+        <div class="image-background"></div>
+    </div>
+
+    <div class="cursor"></div> <!-- Add a div for the custom cursor -->
+
+    <button id="menu-toggle"><img src="media/menu.png" width="100" height="100"></button>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+ 
+    <section>
+        <!-- Wrap the logo with an anchor tag and give it an href attribute -->
+        <a href="products.html" id="logo-container" class="logos hidden"> <!-- Add IDs and classes for animation -->
+            <img id="logo" src="media/med-logo.png" alt="Logo" width="600" height="480">
+        </a>
+    </section>
+
+    <!-- Your content goes here -->
+
+    <footer class="footer">
+        <div class="footer-item">© 2024 <a href="https://instagram.com/noirdarkn3ss" target="_blank">Noir</a></div>
+    </footer>
+</body>
+</html>
