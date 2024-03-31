@@ -255,7 +255,7 @@ body {
 }
 
 .image-background {
-    background-image: url('media/noir-bg.png'); /* Image background */
+    background-image: url('media/nyc.gif'); /* Image background */
     background-size: cover;
     background-position: center;
     width: 100%;
